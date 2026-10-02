@@ -1,0 +1,19 @@
+{
+ "query": "El Paso, TX",
+ "candidates": [
+  {
+   "census_geoid": "16000US4824000",
+   "name": "El Paso city",
+   "display_name": "El Paso, TX",
+   "kind": "incorporated place",
+   "population": 677181
+  },
+  {
+   "census_geoid": "05000US48141",
+   "name": "El Paso County",
+   "display_name": "El Paso County, TX",
+   "kind": "county",
+   "population": 863832
+  }
+ ]
+}

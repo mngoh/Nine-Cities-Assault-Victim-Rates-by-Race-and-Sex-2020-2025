@@ -1,0 +1,7 @@
+# the FBI zips are symlinks to the Dallas project's copies (refetch with scripts/fetch_nibrs.py); .source.json records are tracked
+data/raw/*.zip
+data/interim/
+*/out/cache/
+*/out/run.log
+.DS_Store
+__pycache__/

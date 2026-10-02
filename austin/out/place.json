@@ -1,0 +1,19 @@
+{
+ "query": "Austin, TX",
+ "candidates": [
+  {
+   "census_geoid": "16000US4805000",
+   "name": "Austin city",
+   "display_name": "Austin, TX",
+   "kind": "incorporated place",
+   "population": 958202
+  },
+  {
+   "census_geoid": "05000US48015",
+   "name": "Austin County",
+   "display_name": "Austin County, TX",
+   "kind": "county",
+   "population": 30406
+  }
+ ]
+}

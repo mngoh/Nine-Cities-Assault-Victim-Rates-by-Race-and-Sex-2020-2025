@@ -1,0 +1,12 @@
+{
+ "query": "San Antonio, TX",
+ "candidates": [
+  {
+   "census_geoid": "16000US4865000",
+   "name": "San Antonio city",
+   "display_name": "San Antonio, TX",
+   "kind": "incorporated place",
+   "population": 1445662
+  }
+ ]
+}

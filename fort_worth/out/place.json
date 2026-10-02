@@ -1,0 +1,12 @@
+{
+ "query": "Fort Worth, TX",
+ "candidates": [
+  {
+   "census_geoid": "16000US4827000",
+   "name": "Fort Worth city",
+   "display_name": "Fort Worth, TX",
+   "kind": "incorporated place",
+   "population": 924663
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "query": "Houston, TX",
+ "candidates": [
+  {
+   "census_geoid": "16000US4835000",
+   "name": "Houston city",
+   "display_name": "Houston, TX",
+   "kind": "incorporated place",
+   "population": 2296253
+  },
+  {
+   "census_geoid": "05000US48225",
+   "name": "Houston County",
+   "display_name": "Houston County, TX",
+   "kind": "county",
+   "population": 22107
+  }
+ ]
+}
