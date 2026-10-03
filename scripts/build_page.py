@@ -99,6 +99,10 @@ def main():
         f"The gap is not concentrated in partner assault: in {n_of(len(smaller_in_partner), len(rel))} cities with relationship data, it is smaller within partner assault than outside it.",
         f"Between the first and second half of each city's window, the gap with Hispanic women narrowed in {n_of(len(narrowed_H), len(cities))} cities"
         + (f" and held in {listing(flat_H)}" if flat_H else "") + f"; the gap with White women changed by between {min(chg_W)}% and {max(chg_W):+d}%.",
+        "What this number measures: police reports, not how often women are hurt. In the national victimization survey, which counts assaults whether or not police "
+        "learned of them, Black and White women describe being assaulted at about the same rate nationally and about 1.5 to 2 times in large cities. A follow-up "
+        "(github.com/mngoh/Police-Records-vs-Survey-Assault-Victims-by-Race-and-Sex-2015-2025) tested why police records differ more: not reporting rates, not how "
+        "police write up a call, not the same women counted repeatedly, but largely where assaults happen and who calls.",
     ]
 
     # overview: rates and the two main ratios

@@ -26,6 +26,7 @@ Live page: https://mngoh.github.io/Nine-Cities-Assault-Victim-Rates-by-Race-and-
 Per 100,000 residents a year, Black women's rate runs from 2,036 in El Paso to 4,205 in DC. Against Hispanic women it is 1.6 to 3.2 times, and the most conservative bound stays above 1 in every city but Baltimore, where ethnicity is unknown for 41.6% of women victims.
 Where neighborhood could be controlled (Los Angeles, Baltimore and Dallas for non-family assaults only), 2.1 to 3.1 times remains against Hispanic and White women. The gap is not concentrated in partner assault: in six of eight cities with relationship data, it is smaller within partner assault than outside it.
 Between the first and second half of each city's window, the gap with Hispanic women narrowed in eight of nine cities and held in Houston; the gap with White women changed by between -1% and +6%.
+What this number measures: police reports, not how often women are hurt. In the national victimization survey, which counts assaults whether or not police learned of them, Black and White women describe being assaulted at about the same rate nationally and about 1.5 to 2 times in large cities. A follow-up (github.com/mngoh/Police-Records-vs-Survey-Assault-Victims-by-Race-and-Sex-2015-2025) tested why police records differ more: not reporting rates, not how police write up a call, not the same women counted repeatedly, but largely where assaults happen and who calls.
 
 Caveats:
 
