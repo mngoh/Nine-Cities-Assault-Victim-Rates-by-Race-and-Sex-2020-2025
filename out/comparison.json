@@ -105,7 +105,21 @@
    "Asian": 10.71
   },
   "adjusted_note": "all assaults, tract model",
-  "black_women_pop": 166645.0
+  "black_women_pop": 166645.0,
+  "victims_total": 174827,
+  "women_n": {
+   "focus": 23622,
+   "other": 59987
+  },
+  "unknown_race_pct": null,
+  "model_crude": {
+   "Hispanic": 2.41,
+   "White": 5.12,
+   "Asian": 16.68
+  },
+  "combo_ratio": 1.24,
+  "months": null,
+  "page": "https://mngoh.github.io/LA-Crime/"
  },
  {
   "city": "DC",
@@ -231,7 +245,20 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 156592.0
+  "black_women_pop": 156592.0,
+  "victims_total": 56092,
+  "women_n": {
+   "focus": 26341,
+   "other": 4455
+  },
+  "unknown_race_pct": {
+   "F": 3.4,
+   "M": 6.5
+  },
+  "combo_ratio": 1.088,
+  "model_crude": null,
+  "months": null,
+  "page": "https://mngoh.github.io/DC-Assault-Victims-by-Race-and-Sex-2022-2025/"
  },
  {
   "city": "Baltimore",
@@ -342,7 +369,24 @@
    "Asian": 17.85
   },
   "adjusted_note": "all assaults, tract model",
-  "black_women_pop": 187091.0
+  "black_women_pop": 187091.0,
+  "victims_total": 47588,
+  "women_n": {
+   "focus": 20233,
+   "other": 4876
+  },
+  "unknown_race_pct": {
+   "F": 2.3,
+   "M": 5.4
+  },
+  "combo_ratio": 1.05,
+  "model_crude": {
+   "Hispanic": 2.17,
+   "White": 3.04,
+   "Asian": 11.07
+  },
+  "months": null,
+  "page": "https://mngoh.github.io/Baltimore-Assault-Victims/"
  },
  {
   "city": "Dallas",
@@ -472,7 +516,24 @@
    "Asian": 13.95
   },
   "adjusted_note": "non-family assaults on adults only (city file), tract model",
-  "black_women_pop": 163509.0
+  "black_women_pop": 163509.0,
+  "victims_total": 83911,
+  "women_n": {
+   "focus": 24838,
+   "other": 25223
+  },
+  "unknown_race_pct": {
+   "F": 0.2,
+   "M": 0.4
+  },
+  "combo_ratio": 1.073,
+  "model_crude": {
+   "Hispanic": 2.41,
+   "White": 3.6,
+   "Asian": 15.27
+  },
+  "months": null,
+  "page": "https://mngoh.github.io/Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/"
  },
  {
   "city": "Houston",
@@ -599,7 +660,20 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 288344.0
+  "black_women_pop": 288344.0,
+  "victims_total": 172062,
+  "women_n": {
+   "focus": 48362,
+   "other": 48435
+  },
+  "unknown_race_pct": {
+   "F": 0.4,
+   "M": 0.8
+  },
+  "combo_ratio": 1.092,
+  "model_crude": null,
+  "months": 48,
+  "page": "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/houston"
  },
  {
   "city": "San Antonio",
@@ -726,7 +800,20 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 50121.0
+  "black_women_pop": 50121.0,
+  "victims_total": 106871,
+  "women_n": {
+   "focus": 7762,
+   "other": 52938
+  },
+  "unknown_race_pct": {
+   "F": 2.6,
+   "M": 2.8
+  },
+  "combo_ratio": 1.284,
+  "model_crude": null,
+  "months": 48,
+  "page": "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/san_antonio"
  },
  {
   "city": "Austin",
@@ -853,7 +940,20 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 36972.0
+  "black_women_pop": 36972.0,
+  "victims_total": 50825,
+  "women_n": {
+   "focus": 6207,
+   "other": 20372
+  },
+  "unknown_race_pct": {
+   "F": 1.1,
+   "M": 1.2
+  },
+  "combo_ratio": 1.249,
+  "model_crude": null,
+  "months": 48,
+  "page": "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/austin"
  },
  {
   "city": "Fort Worth",
@@ -980,7 +1080,20 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 100606.0
+  "black_women_pop": 100606.0,
+  "victims_total": 41857,
+  "women_n": {
+   "focus": 10764,
+   "other": 14520
+  },
+  "unknown_race_pct": {
+   "F": 0.8,
+   "M": 1.0
+  },
+  "combo_ratio": 1.123,
+  "model_crude": null,
+  "months": 48,
+  "page": "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/fort_worth"
  },
  {
   "city": "El Paso",
@@ -1107,6 +1220,19 @@
   },
   "adjusted": null,
   "adjusted_note": null,
-  "black_women_pop": 10314.0
+  "black_women_pop": 10314.0,
+  "victims_total": 30077,
+  "women_n": {
+   "focus": 840,
+   "other": 15698
+  },
+  "unknown_race_pct": {
+   "F": 0.1,
+   "M": 0.2
+  },
+  "combo_ratio": 1.418,
+  "model_crude": null,
+  "months": 48,
+  "page": "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/el_paso"
  }
 ]

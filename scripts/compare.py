@@ -20,6 +20,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 GIT = ROOT.parent
 TEXAS = ["houston", "san_antonio", "austin", "fort_worth", "el_paso"]
 OTHERS = ["Hispanic", "White", "Asian"]
+REPO = "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025"
+PAGES = {"Los Angeles": "https://mngoh.github.io/LA-Crime/", "DC": "https://mngoh.github.io/DC-Assault-Victims-by-Race-and-Sex-2022-2025/",
+         "Baltimore": "https://mngoh.github.io/Baltimore-Assault-Victims/", "Dallas": "https://mngoh.github.io/Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/"}
 LA_COMBO = 1.24  # LA-Crime README: 24% more people are Black alone or in combination than Black alone
 PARTNER = {"SE", "CS", "BG", "HR", "XS", "XR"}
 
@@ -88,6 +91,10 @@ def from_kit(name, src, cfg_dir, checks=None, model_note=None):
         "adjusted": {g: m["pairwise"][g]["adjusted"]["rate_ratio"] for g in OTHERS} if m else None,
         "adjusted_note": model_note if m else None,
         "black_women_pop": json.loads((cfg_dir / "out/population.json").read_text())["city"]["Black"]["F"],
+        "victims_total": R["counts"]["total"], "women_n": t["n"], "unknown_race_pct": R["counts"]["unknown_race_share_by_sex"],
+        "combo_ratio": json.loads((cfg_dir / "out/population.json").read_text()).get("combo_ratio", {}).get("Black"),
+        "model_crude": {g: m["pairwise"][g]["crude"]["rate_ratio"] for g in OTHERS} if m else None,
+        "months": None, "page": None,
     }
     return row
 
@@ -115,7 +122,10 @@ def la_row():
             "halves": {"years": [ys[:2], ys[2:]], "first": half(ys[:2]), "second": half(ys[2:])},
             "women_victims": {g: p["counts"]["race_sex_all"][g]["F"] for g in p["counts"]["race_sex_all"]},
             "adjusted": {g: m["pairwise"][g]["adjusted"]["rate_ratio"] for g in OTHERS}, "adjusted_note": "all assaults, tract model",
-            "black_women_pop": p["rates"]["Black"]["popF"]}
+            "black_women_pop": p["rates"]["Black"]["popF"],
+            "victims_total": p["counts"]["total"], "women_n": {"focus": p["tests"]["women_n"]["black"], "other": p["tests"]["women_n"]["other"]},
+            "unknown_race_pct": None, "model_crude": {g: m["pairwise"][g]["crude"]["rate_ratio"] for g in OTHERS}, "combo_ratio": LA_COMBO,
+            "months": None, "page": PAGES["Los Angeles"]}
 
 
 def main():
@@ -127,6 +137,7 @@ def main():
     d = from_kit("Dallas", "FBI NIBRS", dal, json.loads((dal / "out/dallas_checks.json").read_text()))
     cm = json.loads((dal / "city/out/results.json").read_text())["model"]
     d["adjusted"] = {g: cm["pairwise"][g]["adjusted"]["rate_ratio"] for g in OTHERS}
+    d["model_crude"] = {g: cm["pairwise"][g]["crude"]["rate_ratio"] for g in OTHERS}
     d["adjusted_note"] = "non-family assaults on adults only (city file), tract model"
     raw = pd.concat([pd.read_csv(dal / s, dtype=str) for s in ("data/dallas_simple.csv", "data/dallas_aggravated.csv")])
     w = raw[raw["sex"] == "F"]
@@ -134,7 +145,13 @@ def main():
     rows.append(d)
     names = {"houston": "Houston", "san_antonio": "San Antonio", "austin": "Austin", "fort_worth": "Fort Worth", "el_paso": "El Paso"}
     for c in TEXAS:
-        rows.append(from_kit(names[c], "FBI NIBRS", ROOT / c))
+        r = from_kit(names[c], "FBI NIBRS", ROOT / c)
+        v = pd.concat([pd.read_csv(ROOT / c / f"data/{c}_{k}.csv", dtype=str, usecols=["incident_date"]) for k in ("simple", "aggravated")])
+        r["months"] = int(v["incident_date"].str[:7].nunique())
+        r["page"] = f"{REPO}/tree/main/{c}"
+        rows.append(r)
+    for r in rows:
+        r["page"] = r["page"] or PAGES.get(r["city"])
     (ROOT / "out/comparison.json").write_text(json.dumps(rows, indent=1) + "\n")
 
     f = lambda v: "n/a" if v is None else (f"{v:,}" if isinstance(v, int) else f"{v}")
