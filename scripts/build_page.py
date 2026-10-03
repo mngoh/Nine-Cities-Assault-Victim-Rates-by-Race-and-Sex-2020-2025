@@ -102,7 +102,7 @@ def main():
         "What this number measures: police reports, not how often women are hurt. In the national victimization survey, which counts assaults whether or not police "
         "learned of them, Black and White women describe being assaulted at about the same rate nationally and about 1.5 to 2 times in large cities. A follow-up "
         "(github.com/mngoh/Police-Records-vs-Survey-Assault-Victims-by-Race-and-Sex-2015-2025) tested why police records differ more: not reporting rates, not how "
-        "police write up a call, not the same women counted repeatedly, but largely where assaults happen and who calls.",
+        "police write up a call (or only a little), not the same women counted repeatedly, but largely where assaults happen and who calls.",
     ]
 
     # overview: rates and the two main ratios
