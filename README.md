@@ -13,9 +13,9 @@ Live page: https://mngoh.github.io/Nine-Cities-Assault-Victim-Rates-by-Race-and-
 
 | City | Source, years | Black women, per 100,000 | vs Hispanic | vs White | Lowest bound vs Hispanic | Lowest bound vs White |
 |---|---|---|---|---|---|---|
-| [Los Angeles](https://mngoh.github.io/LA-Crime/) | LAPD records (pre-NIBRS), 2020 to 2023 | 3,544 | 2.86x | 5.7x | 2.31x | 4.6x |
+| [Los Angeles](https://mngoh.github.io/Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023/) | LAPD records (pre-NIBRS), 2020 to 2023 | 3,544 | 2.86x | 5.7x | 2.31x | 4.6x |
 | [DC](https://mngoh.github.io/DC-Assault-Victims-by-Race-and-Sex-2022-2025/) | FBI NIBRS, 2022 to 2025 | 4,205 | 3.22x | 10.21x | 2.22x | 9.38x |
-| [Baltimore](https://mngoh.github.io/Baltimore-Assault-Victims/) | BPD legacy records, 2022 to 2024 | 3,605 | 1.62x | 2.58x | 0.82x | 2.46x |
+| [Baltimore](https://mngoh.github.io/Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024/) | BPD legacy records, 2022 to 2024 | 3,605 | 1.62x | 2.58x | 0.82x | 2.46x |
 | [Dallas](https://mngoh.github.io/Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/) | FBI NIBRS, 2022 to 2025 | 3,798 | 2.26x | 3.91x | 2.11x | 3.64x |
 | [Houston](https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/houston) | FBI NIBRS, 2022 to 2025 | 4,193 | 2.43x | 3.76x | 2.23x | 3.44x |
 | [San Antonio](https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025/tree/main/san_antonio) | FBI NIBRS, 2022 to 2025 | 3,872 | 1.84x | 2.22x | 1.43x | 1.73x |

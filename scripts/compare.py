@@ -21,9 +21,9 @@ GIT = ROOT.parent
 TEXAS = ["houston", "san_antonio", "austin", "fort_worth", "el_paso"]
 OTHERS = ["Hispanic", "White", "Asian"]
 REPO = "https://github.com/mngoh/Nine-Cities-Assault-Victim-Rates-by-Race-and-Sex-2020-2025"
-PAGES = {"Los Angeles": "https://mngoh.github.io/LA-Crime/", "DC": "https://mngoh.github.io/DC-Assault-Victims-by-Race-and-Sex-2022-2025/",
-         "Baltimore": "https://mngoh.github.io/Baltimore-Assault-Victims/", "Dallas": "https://mngoh.github.io/Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/"}
-LA_COMBO = 1.24  # LA-Crime README: 24% more people are Black alone or in combination than Black alone
+PAGES = {"Los Angeles": "https://mngoh.github.io/Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023/", "DC": "https://mngoh.github.io/DC-Assault-Victims-by-Race-and-Sex-2022-2025/",
+         "Baltimore": "https://mngoh.github.io/Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024/", "Dallas": "https://mngoh.github.io/Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025/"}
+LA_COMBO = 1.24  # Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023 README: 24% more people are Black alone or in combination than Black alone
 PARTNER = {"SE", "CS", "BG", "HR", "XS", "XR"}
 
 
@@ -100,7 +100,7 @@ def from_kit(name, src, cfg_dir, checks=None, model_note=None):
 
 
 def la_row():
-    d = GIT / "LA-Crime/data"
+    d = GIT / "Los-Angeles-CA-Assault-Victim-Rates-by-Race-and-Sex-2020-2023/data"
     p, m, nb = (json.loads((d / f).read_text()) for f in ("page_data.json", "model_results.json", "nibrs_comparison.json"))
     rates = {g: p["rates"][g]["F"] for g in p["rates"]}
     ratio = {g: rnd(rates["Black"] / rates[g]) for g in OTHERS}
@@ -131,8 +131,8 @@ def la_row():
 def main():
     rows = [la_row()]
     rows.append(from_kit("DC", "FBI NIBRS", GIT / "DC-Assault", json.loads((GIT / "DC-Assault/out/dc_checks.json").read_text())))
-    rows.append(from_kit("Baltimore", "BPD legacy records", GIT / "Baltimore-Assault-Victims",
-                         json.loads((GIT / "Baltimore-Assault-Victims/out/baltimore_checks.json").read_text()), "all assaults, tract model"))
+    rows.append(from_kit("Baltimore", "BPD legacy records", GIT / "Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024",
+                         json.loads((GIT / "Baltimore-MD-Assault-Victim-Rates-by-Race-and-Sex-2022-2024/out/baltimore_checks.json").read_text()), "all assaults, tract model"))
     dal = GIT / "Dallas-TX-Assault-Victim-Rates-by-Race-and-Sex-2022-2025"
     d = from_kit("Dallas", "FBI NIBRS", dal, json.loads((dal / "out/dallas_checks.json").read_text()))
     cm = json.loads((dal / "city/out/results.json").read_text())["model"]
